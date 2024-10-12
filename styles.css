@@ -37,7 +37,7 @@ footer {
 }
 
 .nav-bar {
-    background-color: #01143D; /* Same color as header */
+    background-color: #00639A; /* Same color as header */
     overflow: hidden;
     width: 100%;
     position: fixed; /* Fixes the navbar at the top */
@@ -52,13 +52,13 @@ footer {
 }
 
 .nav-bar li {
-    float: centre; /* Aligns items horizontally */
+    float: left; /* Aligns items horizontally */
 }
 
 .nav-bar li a {
     display: block;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
