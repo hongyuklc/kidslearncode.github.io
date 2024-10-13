@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Anton'; /* Define a name for the font */
+    src: url('/Anton-Regular.ttf');
+}
+
+@fontface{
+    font-family: 'BarlowSemiCondensed';
+    src: url('/BarlowSemiCondensed-Regular.ttf');
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
