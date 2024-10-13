@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Anton'; /* Define a name for the font */
-    src: url('/Anton-Regular.ttf');
+    src: url('/kids-learn-code.github.io/Anton-Regular.ttf');
 }
 
 @fontface{
     font-family: 'BarlowSemiCondensed';
-    src: url('/BarlowSemiCondensed-Regular.ttf');
+    src: url('/kids-learn-code.github.io/BarlowSemiCondensed-Regular.ttf');
 }
 body {
     font-family: BarlowSemiCondensed;
