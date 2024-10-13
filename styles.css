@@ -3,7 +3,7 @@
     src: url('/kids-learn-code.github.io/Anton-Regular.ttf');
 }
 
-@fontface{
+@font-face{
     font-family: 'BarlowSemiCondensed';
     src: url('/kids-learn-code.github.io/BarlowSemiCondensed-Regular.ttf');
 }
@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    font-family; Anton;
+    font-family: Anton;
     background: #00639A;
     color: white;
     padding: 20.5px;
