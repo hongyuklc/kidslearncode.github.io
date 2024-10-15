@@ -147,6 +147,10 @@ footer {
   background-position: center;
 }
 
+main {
+    padding: 20px;
+}
+
 .team {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
@@ -159,7 +163,7 @@ footer {
 
 .flip-box-inner {
     position: relative;
-    width: 100%; /* Full width */
+    width: 100%; /* Full width of the parent */
     height: 300px; /* Set height */
     transition: transform 0.6s; /* Animation speed */
     transform-style: preserve-3d; /* Enables 3D transformations */
@@ -178,11 +182,12 @@ footer {
 
 .flip-box-front img {
     width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; /* Ensures it fills the container */
+    object-fit: cover; /* Maintains aspect ratio and covers the area */
 }
 
 .flip-box-back {
-    background-color: #01143D; /* Background color for back side */
+    background-color: #4CAF50; /* Background color for back side */
     color: white;
     display: flex;
     align-items: center;
@@ -191,6 +196,12 @@ footer {
     transform: rotateY(180deg); /* Initially hide back face */
 }
 
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
