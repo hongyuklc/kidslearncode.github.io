@@ -1,12 +1,4 @@
-@font-face {
-    font-family: 'Anton'; /* Define a name for the font */
-    src: url('/Anton-Regular.ttf');
-}
-
-@font-face{
-    font-family: 'BarlowSemiCondensed';
-    src: url('/BarlowSemiCondensed-Regular.ttf');
-}
+/* Base styles for all devices */
 body {
     font-family: BarlowSemiCondensed;
     margin: 0;
@@ -30,190 +22,41 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #00639A;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #00639A;
-    color: white;
-}
-
-.nav-bar {
-    background-color: #00639A; /* Same color as header */
-    overflow: hidden;
-    width: 100%;
-    position: fixed; /* Fixes the navbar at the top */
-    top: 0; /* Positions it at the top */
-    z-index: 10; /* Ensures it stays above other content */
-}
-
-.nav-bar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-bar li {
-    float: left; /* Aligns items horizontally */
-}
-
-.nav-bar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.nav-bar li a:hover {
-    background-color: #00557A; /* Darker shade on hover */
-}
-
-.menu-bar {
-  background-color:#00557A ;
-  height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-  position: relative;
-}
-.menu-bar ul {
-  list-style: none;
-  display: flex;
-}
-.menu-bar ul li {
-  color: white;
-  /* width: 120px; */
-  padding: 10px 30px;
-  /* text-align: center; */
-  position: relative;
-}
-.menu-bar ul li a {
-  font-size: 20px;
-  color: var(--color-white);
-  text-decoration: none;
-  transition: all 0.3s;
-}
-.menu-bar ul li a:hover {
-  color: var(--color-primary);
-}
-.fas {
-  float: right;
-  margin-left: 10px;
-  padding-top: 3px;
-}
-
-.dropdown-menu {
-  display: none;
-}
-.menu-bar ul li:hover .dropdown-menu {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: var(--color-black);
-}
-.menu-bar ul li:hover .dropdown-menu ul {
-  display: block;
-  margin: 10px;
-}
-.menu-bar ul li:hover .dropdown-menu ul li {
-  width: 150px;
-  padding: 10px;
-}
-.dropdown-menu-1 {
-  display: none;
-}
-.dropdown-menu ul li:hover .dropdown-menu-1 {
-  display: block;
-  position: absolute;
-  left: 150px;
-  top: 0;
-  background-color: var(--color-black);
-}
-.hero {
-  height: calc(100vh - 80px);
-  background-image: url(./bg.jpg);
-  background-position: center;
-}
-
-main {
-    padding: 20px;
-}
-
-.team {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
-    gap: 15px; /* Space between grid items */
-}
-
-.flip-box {
-    perspective: 1000px; /* Adds depth to the flip effect */
-}
-
-.flip-box-inner {
-    position: relative;
-    width: 100%; /* Full width of the parent */
-    height: 300px; /* Set height */
-    transition: transform 0.6s; /* Animation speed */
-    transform-style: preserve-3d; /* Enables 3D transformations */
-}
-
-.flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg); /* Flips the box on hover */
-}
-
-.flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Hides the back face when not visible */
-}
-
-.flip-box-front img {
-    width: 100%; /* Responsive image */
-    height: 100%; /* Ensures it fills the container */
-    object-fit: cover; /* Maintains aspect ratio and covers the area */
-}
-
-.flip-box-back {
-    background-color: #4CAF50; /* Background color for back side */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transform: rotateY(180deg); /* Initially hide back face */
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #333;
-    color: white;
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .team {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
-        gap: 10px; /* Reduced gap for smaller screens */
+    header {
+        padding: 15px; /* Adjust header padding for smaller screens */
+    }
+
+    .intro, .skills-developed, .timeline {
+        margin: 10px; /* Reduce margins on smaller screens */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .menu-bar ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align items to start */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .menu-bar ul li {
+        padding: 10px; /* Adjust padding for menu items */
+        text-align: left; /* Align text to the left */
+        width: 100%; /* Full width for menu items */
     }
 }
 
 @media (max-width: 480px) {
-    .team {
-        grid-template-columns: repeat(1, 1fr); /* One column on small screens */
-        gap: 5px; /* Reduced gap for smaller screens */
+    header h1 {
+        font-size: 24px; /* Smaller font size for mobile headers */
+    }
+
+    header p {
+        font-size: 16px; /* Smaller font size for mobile paragraphs */
+    }
+
+    .menu-bar ul li a {
+        font-size: 16px; /* Adjust font size for menu links */
+        padding: 8px; /* Smaller padding for mobile menu links */
     }
 }
