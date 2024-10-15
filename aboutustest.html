@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/DtzhGqz/Kids-Learn-Code-1.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-bar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .menu-bar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu-bar li {
+            flex: 1;
+        }
+
+        .menu-bar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .menu-bar a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown-menu {
+            display: none; /* Hide dropdown by default */
+            position: absolute; /* Position it below the parent */
+            background-color: #333; /* Same background color */
+            z-index: 1; /* Ensure it appears above other elements */
+        }
+
+        .menu-bar li:hover .dropdown-menu {
+            display: block; /* Show dropdown on hover */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        section.intro {
+            padding: 20px;
+            max-width: 800px; /* Limit width for larger screens */
+            margin: auto; /* Center the section */
+        }
+
+        img {
+            max-width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        @media (max-width: 600px) {
+            .menu-bar ul {
+                flex-direction: column; /* Stack menu items vertically on small screens */
+            }
+            
+            .menu-bar li {
+                text-align: left; /* Align text to the left */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-bar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/aboutus">About</a></li>
+        <li><a href="#">Impact <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="/studentsimpact">Students' Impact</a></li>
+                  <li><a href="/volunteersimpact">Portfolio</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="/typesofworkshops">Types of Workshops</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <section class="intro">
+        <h2>What is Kids Learn Code?</h2>
+        <p>Kids Learn Code is a non-profit educational institution (Ground-Up) in Singapore, which aims to engage and ignite kids’ passion for coding in an evolving world. We envision a world where every child has access to quality coding education. As a student-led organisation, we provide free coding education to students aged 7-12 and hope it will ignite their passion and pursue coding as an aspiration in the future.</p>
+        <img src="https://i.ibb.co/KrtgXFP/Screenshot-2024-10-12-at-4-19-00-PM.png" alt="Kids Learn Code">
+    </section>
+
+    <script src="//code.tidio.co/erjlitousguh6i2nteif96hubirmdwdp.js" async></script>   
+</body>
+</html>
