@@ -87,11 +87,11 @@
     
     <div class="stats">
         <div class="stat">
-            <h2>&gt; 200+</h2>
+            <h2 data-target="200">0+</h2>
             <p>Students participated in our workshops from 2022-2023</p>
         </div>
         <div class="stat">
-            <h2>&gt; 70%</h2>
+            <h2 data-target="70">0%</h2>
             <p>Students who agree/strongly agree that our online workshops were enjoyable</p>
         </div>
     </div>
@@ -107,6 +107,27 @@
             <p><strong>- Mrs Tay-Phua Ei Ling</strong></p>
         </div>
     </section>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.stat h2');
+    
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const increment = target / 100; // Adjust increment to control the speed
+    
+            const updateCounter = () => {
+                const currentValue = +counter.innerText.replace(/\D/g, ''); // Remove non-numeric characters
+                if (currentValue < target) {
+                    counter.innerText = Math.ceil(currentValue + increment) + (counter.innerText.includes('%') ? '%' : '+');
+                    setTimeout(updateCounter, 10); // Adjust the timeout for speed
+                } else {
+                    counter.innerText = target + (counter.innerText.includes('%') ? '%' : '+');
+                }
+            };
+    
+            updateCounter();
+        });
+    });</script>
     <script src="//code.tidio.co/erjlitousguh6i2nteif96hubirmdwdp.js" async></script>
 </body>
 </html>
+
